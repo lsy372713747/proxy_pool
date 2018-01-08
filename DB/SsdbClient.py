@@ -56,7 +56,7 @@ class SsdbClient(object):
         else:
             return None
 
-    def put(self, proxy, num=1):
+    def put(self, proxy, num=0):
         """
         将代理放入hash, 使用changeTable指定hash name
         :param proxy:

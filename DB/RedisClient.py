@@ -56,7 +56,7 @@ class RedisClient(object):
         :return:
         """
         key = json.dumps(key) if isinstance(key, (dict, list)) else key
-        return self.__conn.hincrby(self.name, key, 1)
+        return self.__conn.hincrby(self.name, key, 0)
         # return self.__conn.sadd(self.name, value)
 
     def getvalue(self, key):
